@@ -1,0 +1,7 @@
+node_modules
+assets/profile/*
+assets/recipes/*
+!assets/profile/default.png
+!assets/recipes/null.jpg
+.env
+.vscode

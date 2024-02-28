@@ -1,0 +1,733 @@
+{
+	"info": {
+		"_postman_id": "7c275cbb-3390-4936-beb3-2fb2471fdc48",
+		"name": "RecipeRover-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8809593",
+		"_collection_link": "https://www.postman.com/archisoftdevelopers/workspace/reciperover-api/collection/8809593-7c275cbb-3390-4936-beb3-2fb2471fdc48?action=share&source=collection_link&creator=8809593"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "ADMIN REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"admin\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"phone\": \"081576525539\",\r\n    \"password\": \"admin\",\r\n    \"level\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"reyrey\",\r\n    \"email\": \"reyrey@gmail.com\",\r\n    \"phone\": \"081573425539\",\r\n    \"password\": \"reyrey\",\r\n    \"level\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"reyrey@gmail.com\",\r\n    \"password\": \"reyrey\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS CHECK EMAIL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/email/reyrey@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"email",
+								"reyrey@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS GET LIST ASC",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJleXJleUBnbWFpbC5jb20iLCJsZXZlbCI6MSwiaWF0IjoxNjcwMjM5MDE2fQ.hbWDTiZP81axJQ_qJiCUcu_3v_ZSnXdaRWHSG96AbyY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3001/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS GET LIST PAGINATION",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJleXJleUBnbWFpbC5jb20iLCJsZXZlbCI6MSwiaWF0IjoxNjcwMjM5MDE2fQ.hbWDTiZP81axJQ_qJiCUcu_3v_ZSnXdaRWHSG96AbyY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3001/user/1?name=re&sort=date_created&asc=desc",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "re"
+								},
+								{
+									"key": "sort",
+									"value": "date_created"
+								},
+								{
+									"key": "asc",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS GET DETAIL",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJleXJleUBnbWFpbC5jb20iLCJsZXZlbCI6MSwiaWF0IjoxNjcwMjM5MDE2fQ.hbWDTiZP81axJQ_qJiCUcu_3v_ZSnXdaRWHSG96AbyY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3001/user/detail/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"detail",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdlcmFsZEBnbWFpbC5jb20iLCJsZXZlbCI6MCwiaWF0IjoxNjY1NDg5Mjc0fQ._thz212gGlqgJTdKzK7ZdK6DWArB78jxTX__Cz1N-Oo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"rere\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/user/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS UPDATE IMAGE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdlcmFsZEBnbWFpbC5jb20iLCJsZXZlbCI6MCwiaWF0IjoxNjY2MDUzNjYwfQ.hTuO0QGDNqQYQ9BSGLT0oaC3MDlZm8kALnqOMboq5FA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/rhefa/Documents/PijarCamp/Backend/Profile/buffalo.jfif"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3001/user/changeimg/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"changeimg",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS DELETE DATA",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vbmFsaXNhQGdtYWlsLmNvbSIsImxldmVsIjowLCJpYXQiOjE2NjM4OTk4NDZ9.zU5A7jjW1qCdFo-Bne_nv6u-IgI3vPQrO2ptv0hOHvQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3001/user/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recipes",
+			"item": [
+				{
+					"name": "RECIPE GET LIST ASC",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJleXJleUBnbWFpbC5jb20iLCJsZXZlbCI6MSwiaWF0IjoxNjcwMjQxMTc0fQ.G6CW7VfM0EhDlaZ1LEby1BWB4ulmvGJSbT7oKMou_Vg",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:3001/recipes",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"recipes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RECIPE GET LIST PAGINATION",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJleXJleUBnbWFpbC5jb20iLCJsZXZlbCI6MSwiaWF0IjoxNjcwMjQxMTc0fQ.G6CW7VfM0EhDlaZ1LEby1BWB4ulmvGJSbT7oKMou_Vg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3001/recipes/1?title=&asc=desc&sort=title",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"recipes",
+								"1"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": ""
+								},
+								{
+									"key": "asc",
+									"value": "desc"
+								},
+								{
+									"key": "sort",
+									"value": "title"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RECIPE GET DETAIL",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtldmluQGdtYWlsLmNvbSIsImxldmVsIjowLCJpYXQiOjE2NjM5MDEwMzJ9.246NFXIndfF37RKP5cCPah13iBIgquFU26whwgZc2zE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3001/recipe/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"recipe",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RECIPES OWNED LIST",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/recipe/owned/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"recipe",
+								"owned",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RECIPES LIKED LIST",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/recipe/liked/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"recipe",
+								"liked",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RECIPES SAVED LIST",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/recipe/saved/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"recipe",
+								"saved",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RECIPES FIND BY TITLE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJleXJleUBnbWFpbC5jb20iLCJsZXZlbCI6MSwiaWF0IjoxNjcwMjQyMDQ3fQ.HFdjQzzHhAVZgIviwaBbZRe8sEqJej1R2OZ_bpf565I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/recipe/find",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"recipe",
+								"find"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RECIPE INSERT DATA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJleXJleUBnbWFpbC5jb20iLCJsZXZlbCI6MSwiaWF0IjoxNjcwMjQxMTc0fQ.G6CW7VfM0EhDlaZ1LEby1BWB4ulmvGJSbT7oKMou_Vg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Jus Apel",
+									"type": "text"
+								},
+								{
+									"key": "ingredient",
+									"value": "Apel, Air, Gula",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/rhefa/Documents/PijarCamp/Backend/Recipe/jus apel.jfif"
+								},
+								{
+									"key": "owner",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3001/recipe/insert",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"recipe",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RECIPE UPDATE DATA",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtldmluQGdtYWlsLmNvbSIsImxldmVsIjowLCJpYXQiOjE2NjM5MTkyNTJ9.oYOtfma9DzOqLocYdEB6MSp-jEvQeEF4G8qV5hrRjA8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Teh Manis\",\r\n    \"ingredient\": \"Teh, Gula, Air\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/recipe/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"recipe",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RECIPE UPDATE IMAGE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtldmluQGdtYWlsLmNvbSIsImxldmVsIjowLCJpYXQiOjE2NjM5MDEwMzJ9.246NFXIndfF37RKP5cCPah13iBIgquFU26whwgZc2zE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3001/recipe/changeimg/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"recipe",
+								"changeimg",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RECIPE DELETE DATA",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtldmluQGdtYWlsLmNvbSIsImxldmVsIjowLCJpYXQiOjE2NjM5MTkyNTJ9.oYOtfma9DzOqLocYdEB6MSp-jEvQeEF4G8qV5hrRjA8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3001/recipe/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"recipe",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Like/Save Recipes",
+			"item": [
+				{
+					"name": "LIKE RECIPE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": 1,\r\n    \"recipe\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/like",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"like"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE RECIPE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": 1,\r\n    \"recipe\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/save",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REMOVE LIKE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/like/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"like",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REMOVE SAVE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/save/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"save",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
