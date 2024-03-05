@@ -1,5 +1,5 @@
 create table users(
-    id serial primary key,
+    id serial primary key, -- Primary Key
     name varchar(30),
     email varchar(50),
     phone varchar(15),
