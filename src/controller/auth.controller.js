@@ -89,10 +89,10 @@ module.exports = {
         // Check if the email exists in the database
         userModel.checkEmail(email)
             .then((result) => {
-                success(res, result.rows, 'success', 'Get email user success'); // Successful response with email data
+                success(res, result.rows, 'success', 'Get email for user success'); // Successful response with email data
             })
             .catch((err) => {
-                failed(res, err.message, 'failed', 'Get email user failed'); // Handle email check failure
+                failed(res, err.message, 'failed', 'Get email for user failed'); // Handle email check failure
             });
     },
 }
