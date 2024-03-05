@@ -43,7 +43,7 @@ RecipeRover API is a RESTful API designed to provide developers with easy access
 
 ### Package Modules Used in this project
 
-Below are lists of modules used in this API:
+Below are lists of modules used in this API project:
 
 * [Node JS](https://nodejs.org/en/docs/)
 * [Express JS](https://expressjs.com/)
