@@ -10,7 +10,7 @@ create table users(
 );
 
 create table recipes(
-    id serial primary key,
+    id serial primary key, -- Primary Key
     title varchar(30),
     ingredient text,
     owner integer references users(id) on delete cascade,
