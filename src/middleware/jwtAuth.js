@@ -1,3 +1,4 @@
+// JWT Authorisation
 const { jwt_secret } = require('../helper/env');
 const jwt = require('jsonwebtoken');
 const { failed } = require('../helper/response');
