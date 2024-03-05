@@ -1,4 +1,4 @@
-//pengecekan user dan admin
+// User admin
 const { failed } = require('../helper/response');
 
 module.exports = {
