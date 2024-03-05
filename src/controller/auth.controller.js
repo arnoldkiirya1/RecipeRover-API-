@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt'); // Import bcrypt for password hashing
 const jwtToken = require('../helper/generateJWT'); // Import JWT token generation helper
 
 module.exports = {
-    // Controller for user registration
+    // Controller that will handle user registration
     register: (req, res) => {
         try {
             const { name, email, phone, password, level } = req.body; // Extract user data from request body
