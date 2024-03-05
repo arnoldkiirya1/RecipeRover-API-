@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const xss = require('xss-clean');
 
+// Import route handlers
 const userRouter = require('./src/route/user.routes.js');
 const recipeRouter = require('./src/route/recipe.routes.js')
 
