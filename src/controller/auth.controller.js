@@ -15,7 +15,7 @@ module.exports = {
                 if (err) {
                     failed(res, err.message, 'Failed', 'Hash Password Failed'); // Handle password hashing error
                 }
-                const data = { // Create user data object with hashed password
+                const data = { // Create user data object with hashed password security
                     name,
                     email,
                     phone,
