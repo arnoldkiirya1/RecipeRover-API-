@@ -1,5 +1,7 @@
 // Load environment variables from .env file
 require('dotenv').config(); 
+
+// Import necessary modules
 const express = require('express');
 const cors = require('cors');
 const cookieparser = require('cookie-parser');
